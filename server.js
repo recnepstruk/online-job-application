@@ -20,13 +20,9 @@ mongoose.connect('mongodb://localhost/onlinejobapp', (err) => {
 // mount logger vertically to view front end requests to server \\
 app.use(logger('dev'));
 app.use(express.static('public'));
-
+app.use(bodyParser.json(), bodyParser.urlencoded({extended: true}));
 // ROUTES \\
 routes(app);
-
-
-
-
 
 app.listen(PORT, (err) => {
     if (err) {

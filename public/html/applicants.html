@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="JobApp">
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+</head>
+
+<body ng-controller="applicantController as aCtrl">
+    <br>
+    <button type="submit">Delete</button>
+    <input type="text" name="delete">
+    <div class="container" ng-init="aCtrl.getApplicants()">
+        <h1>Applicants</h1>
+        <ul id="applications" class="list-unstyled">
+            <li ng-repeat="applicant in aCtrl.data">Name: {{applicant.name}}
+                <br>Bio: {{applicant.bio}}
+                <br> Years of Experience: {{applicant.yearExp}}
+                <br> Why: {{applicant.why}}
+                <br> Skills:
+                <ul>
+                    <li ng-repeat="skill in applicant.skills">{{skill}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="/javascripts/main.js"></script>
+</body>
+
+</html>
