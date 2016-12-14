@@ -8,12 +8,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
 </head>
 
-<body ng-controller="applicantController as aCtrl">
-    <br>
-    <button type="submit">Delete</button>
-    <input type="text" name="delete">
-    <div class="container" ng-init="aCtrl.getApplicants()">
+<body ng-controller="applicantController as aCtrl" class="applicants">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <img alt="Brand" src="http://santiagomenghini.com/wp-content/uploads/2014/01/OhmLogo_web.png">
+                </a>
+            </div>
+            <div class="container" id="title">
+                <h1>Omega 3 Studios</h1>
+            </div>
+        </div>
+    </nav>
+    <!--     <button type="submit">Delete</button>
+    <input type="text" name="delete"> -->
+    <div class="container applicantsPage" ng-init="aCtrl.getApplicants()">
         <h1>Applicants</h1>
+        <br>
         <ul id="applications" class="list-unstyled">
             <li ng-repeat="applicant in aCtrl.data">Name: {{applicant.name}}
                 <br>Bio: {{applicant.bio}}
@@ -21,8 +33,9 @@
                 <br> Why: {{applicant.why}}
                 <br> Skills:
                 <ul>
-                    <li ng-repeat="skill in applicant.skills">{{skill}}</li>
+                    <li ng-repeat="skill in applicant.skills" class="skills">{{skill}}</li>
                 </ul>
+                <br>
             </li>
         </ul>
     </div>

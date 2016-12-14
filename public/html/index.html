@@ -1,41 +1,63 @@
 <!DOCTYPE html>
 <html ng-app="JobApp">
-  <head>
-    <title></title>
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Omega 3 </title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
-  </head>
-  <body ng-controller="homeController">
-	  
+</head>
+
+<body ng-controller="homeController">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="http://santiagomenghini.com/wp-content/uploads/2014/01/OhmLogo_web.png">
+                </a>
+            </div>
+            <div class="container" id="title">
+                <h1>Omega 3 Studios</h1>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="container">
-      <h1>Omega 3 Studios</h1>
-      <h2>Application for Web Developer</h2>
-      <form id="application-form" action="/applicant" method="post">
-        <div class="form-group">
-          <input name="name" type="text" placeholder="Name" class="form-control"/>
+        <h2>Application for Web Developer</h2>
+        <br>
+        <div class="description">
+            <em>At Omega 3 Studios, we’re using huge data and analytics biggly to predict the future of America! Our goal is to use this data to drive profits through the roof. Omega 3 Studios platforms forecast awesome values at a local level, and every month, we forecast 36 months into the past, and our models predict more than 1000% of the variation in price over time. We're seeking a super good looking Web Developer to own our corporate site and build on our Murican Mainstream Model or as we like to call it, our MMMMMMMMMMMM.</em>
         </div>
-        <div class="form-group">
-          <textarea name="bio" rows="5" placeholder="Bio" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-          <textarea name="skills" rows="3" placeholder="Skills (separated by commas)" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-          <input name="yearExp" type="number" placeholder="Years of experience" class="form-control"/>
-        </div>
-        <div class="form-group">
-          <textarea name="why" rows="5" placeholder="Why do you want to work here?" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-default"/>
-        </div>
-      </form>
+        <br>
+        <br>
+        <form id="application-form" action="/applicant" method="post">
+            <div class="form-group">
+                <input name="name" type="text" placeholder="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <textarea name="bio" rows="5" placeholder="Bio" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <textarea name="skills" rows="3" placeholder="Skills (separated by commas)" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <input name="yearExp" type="number" placeholder="Years of experience" class="form-control" />
+            </div>
+            <div class="form-group">
+                <textarea name="why" rows="5" placeholder="Why do you want to work here?" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" />
+            </div>
+        </form>
     </div>
-	  
-	  
-	  
-	  
-	<script src="/javascripts/main.js"></script>
-  </body>
+    <script src="/javascripts/main.js"></script>
+</body>
+
 </html>
